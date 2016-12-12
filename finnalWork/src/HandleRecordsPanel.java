@@ -1,33 +1,43 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.regex.Pattern;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
 
 @SuppressWarnings("serial")
 public class HandleRecordsPanel extends JPanel{
+    //私有控件初始化
     private JLabel title;
     private JPanel titlePanel,buttonPanel,tablePanel,operationPanel;
     private JLabel[] operationLabel = new JLabel[6];
     private JTextField[] operationTextField = new JTextField[6];
     private JButton sureButton,delButton,modifyButton;
     private TableColumn[] columnList = new TableColumn[6];
+    private JTable table ;
+    private int selectedRowIndex;
+    private DefaultTableModel tableModel;
+    /*String studentCodePattern = "/^[0-9]{1,6}$/";
+    Pattern r = Pattern.compile(studentCodePattern);*/
     public HandleRecordsPanel(){
         // 第一个主内容布局
         //布局控件初始化
         //this.setSize(890,540);
         setLayout(new FlowLayout());
-
         titlePanel = new JPanel();
         buttonPanel = new JPanel();
-
+        //对应panel处理
         buildTitlePanel();
         buildTablePanel();
         buildOperationPanel();
         buildButtonPanel();
 
+        tableModel = (DefaultTableModel) table.getModel();
         //加入主panel 布局
         this.add(titlePanel);
         this.add(tablePanel);
@@ -52,7 +62,7 @@ public class HandleRecordsPanel extends JPanel{
         tablePanel =  new JPanel();
         //TODO：真实数据获取
         String[] columnNames = {"学号", "姓名", "性别", "语文","数学","英语"};
-        Object[][] data = {
+        String[][] data = {
                 {"10000001", "aaa", "female", "87","70","92"},
                 {"10000001", "aaa", "female", "87","70","92"},
                 {"10000001", "aaa", "female", "87","70","92"},
@@ -65,7 +75,9 @@ public class HandleRecordsPanel extends JPanel{
                 {"10000001", "aaa", "female", "87","70","92"},
                 {"10000001", "aaa", "female", "87","70","92"},
         };
-        JTable table = new JTable(data, columnNames);
+        //table 初始化 创建对应点击事件
+        table = new JTable(new DefaultTableModel(data, columnNames));
+        table.addMouseListener(new tableListener());
         table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
         JScrollPane scrollPane = new JScrollPane(table);
         //每行宽度 设置
@@ -92,12 +104,12 @@ public class HandleRecordsPanel extends JPanel{
         operationLabel[4] = new JLabel("数学:");
         operationLabel[5] = new JLabel("英语:");
 
-        operationTextField[0] = new JTextField(5);
-        operationTextField[1] = new JTextField(5);
-        operationTextField[2] = new JTextField(5);
-        operationTextField[3] = new JTextField(5);
-        operationTextField[4] = new JTextField(5);
-        operationTextField[5] = new JTextField(5);
+        operationTextField[0] = new JTextField(9);
+        operationTextField[1] = new JTextField(9);
+        operationTextField[2] = new JTextField(8);
+        operationTextField[3] = new JTextField(3);
+        operationTextField[4] = new JTextField(3);
+        operationTextField[5] = new JTextField(3);
 
 
         for (int i = 0;i<operationLabel.length;i++){
@@ -127,16 +139,106 @@ public class HandleRecordsPanel extends JPanel{
     private class ButtonClick implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getActionCommand().equals("确认")){
-                System.out.print(1);
-                //TODO
-            }else if(e.getActionCommand().equals("修改")){
-                System.out.print(2);
-                //TODO
-            }else if(e.getActionCommand().equals("删除")){
-                System.out.print(3);
-                //TODO
+            //数据校验
+            try{
+                if(operationTextField[0].getText().length()>15){
+                    //正则匹配 拿到书再做
+                    return;
+                }else if(operationTextField[1].getText().length()>10 || operationTextField[1].getText().length()<2){
+                    JOptionPane.showMessageDialog(null,"名字长度不合法","",2);
+                    return;
+                }else if(!(operationTextField[2].getText().equals("male") || operationTextField[2].getText().equals("female"))){
+                    JOptionPane.showMessageDialog(null, "性别不存在", "", 2);
+                    return;
+                }else if(Integer.valueOf(operationTextField[3].getText())>100 || Integer.valueOf(operationTextField[3].getText())<0){
+                    JOptionPane.showMessageDialog(null,"语文成绩 超出范围","",2);
+                    return;
+                }else if(Integer.valueOf(operationTextField[4].getText())>100 || Integer.valueOf(operationTextField[4].getText())<0){
+                    JOptionPane.showMessageDialog(null,"数学成绩 超出范围","",2);
+                    return;
+                }else if(Integer.valueOf(operationTextField[5].getText())>100 || Integer.valueOf(operationTextField[5].getText())<0){
+                    JOptionPane.showMessageDialog(null,"英语成绩 超出范围","",2);
+                    return;
+                }
+            }catch (NumberFormatException numEx){
+                JOptionPane.showMessageDialog(null, "不得有空数据","",2);
+                return;
             }
+            if(e.getActionCommand().equals("确认")){
+                try{
+                    String[] arr=new String[6];
+                    for(int i = 0;i<arr.length;i++) {
+                        if(operationTextField[i].getText().equals("")){
+                            JOptionPane.showMessageDialog(null, "内容不可有空");
+                            return;
+                        }
+                        arr[i] = String.valueOf(operationTextField[i].getText());
+                    }
+                    // 添加数据到表格
+                    tableModel.addRow(arr);
+                    // 更新表格
+                    table.invalidate();
+                    JOptionPane.showMessageDialog(null, "添加成功");
+                }catch (Exception ez){
+                    System.out.print(ez.getMessage());
+                }
+                //TODO :数据库添加一行
+            }else if(e.getActionCommand().equals("修改")){
+                for(int i = 0;i<columnList.length;i++){
+                    if(operationTextField[i].getText().equals("")){
+                        JOptionPane.showMessageDialog(null, "内容不可有空","",2);
+                        return;
+                    }
+                }
+                for(int i = 0;i<columnList.length;i++) {
+                    table.setValueAt(operationTextField[i].getText(),selectedRowIndex,i);
+                }
+                //TODO: 数据库修改
+            }else if(e.getActionCommand().equals("删除")){
+                if(selectedRowIndex+1>=table.getRowCount()){
+                    JOptionPane.showMessageDialog(null, "该行不存在","",2);
+                    return ;
+                }
+                tableModel.removeRow(selectedRowIndex);
+                //TODO: 数据库删除
+            }
+        }
+    }
+
+    //表格 对应点击事件
+    public class tableListener implements MouseListener{
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            // 鼠标点击时的处理
+            selectedRowIndex = table.getSelectedRow(); // 取得用户所选单行
+            for(int i = 0;i<columnList.length;i++){
+                operationTextField[i].setText((String)table.getValueAt(selectedRowIndex, i));
+            }
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            // 鼠标按下时的处理
+            System.out.print(1);
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+            // 鼠标松开时的处理
+            System.out.print(1);
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            // 鼠标进入表格时的处理
+            System.out.print(1);
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+            // 鼠标退出表格时的处理
+            System.out.print(1);
         }
     }
 }

@@ -1,11 +1,11 @@
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
+import javax.swing.border.Border;
 
 
 /**
@@ -13,19 +13,69 @@ import javax.swing.SwingConstants;
  */
 public class ResetPasswordPanel extends JPanel {
     private JLabel title;
-    private JPanel titlePanel;
-
+    private JPanel titlePanel,buttonPanel,contentPanel;
+    private JButton sure;
+    private JLabel[] textLabel =  new JLabel[3];
+    private JTextField[] passwordTextField = new JTextField[3];
+    private JPanel[] passwordPanel = new JPanel[3];
     public ResetPasswordPanel(){
         // 第一个主内容布局
+        setLayout(new BorderLayout(10,10));
+        buildTitle();
+        buildButtonPanel();
+        buildContextPanel();
+        this.add(titlePanel, BorderLayout.NORTH);
+        this.add(contentPanel,BorderLayout.CENTER);
+        this.add(buttonPanel, BorderLayout.SOUTH);
+    }
+
+    //标题布局 创建
+    private void buildTitle(){
         titlePanel = new JPanel();
 
-        titlePanel.setPreferredSize(new Dimension(600, 140));
+        titlePanel.setPreferredSize(new Dimension(500, 80));
         titlePanel.setBorder(BorderFactory.createEmptyBorder(40, 0, 0, 0));
 
-        title = new JLabel("Third Panel", SwingConstants.CENTER);
+        title = new JLabel("修改密码", SwingConstants.CENTER);
         title.setFont(new Font("Font.DIALOG", Font.BOLD, 28));
 
         titlePanel.add(title);
-        this.add(titlePanel, BorderLayout.NORTH);
+    }
+
+    //按钮布局 创建
+    private void buildButtonPanel(){
+        buttonPanel =  new JPanel();
+        sure = new JButton("确认");
+        sure.addActionListener(new SureListener());
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,0,100,0));
+        buttonPanel.add(sure);
+    }
+
+    //内容布局 创建
+    private void buildContextPanel(){
+        contentPanel = new JPanel();
+        //contentPanel.setLayout(new BorderLayout(10,10));
+
+        textLabel[0] = new JLabel("请输入旧密码");
+        textLabel[1] = new JLabel("请输入新密码");
+        textLabel[2] = new JLabel("再次输入新密码");
+        for (int i =0;i<textLabel.length;i++){
+            passwordTextField[i] = new JTextField(10);
+            passwordPanel[i] = new JPanel();
+            passwordPanel[i].add(textLabel[i]);
+            passwordPanel[i].add(passwordTextField[i]);
+            //TODO:label 和 textfield 对齐
+            passwordPanel[i].setPreferredSize(new Dimension(800,40));
+            contentPanel.add(passwordPanel[i]);
+        }
+    }
+
+    //按钮点击 事件
+    private class SureListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //TODO:更新密码 数据库
+        }
     }
 }
