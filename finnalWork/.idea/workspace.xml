@@ -65,7 +65,7 @@
           <file leaf-file-name="ResetPasswordPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
+                <state relative-caret-position="550">
                   <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="44" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -74,11 +74,27 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HandleRecordsPanel.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="HandleRecordsPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+                <state relative-caret-position="426">
+                  <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+                  <folding>
+                    <element signature="method#buildTitlePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+                    <element signature="method#buildTablePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+                    <element signature="method#buildOperationPanel#0;class#HandleRecordsPanel#0" expanded="false" />
+                    <element signature="method#buildButtonPanel#0;class#HandleRecordsPanel#0" expanded="false" />
+                    <element signature="class#ButtonClick#0;class#HandleRecordsPanel#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
                   <folding />
                 </state>
               </provider>
@@ -88,11 +104,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainLayout.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MainLayout.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+                <state relative-caret-position="176">
+                  <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
                   <folding>
                     <element signature="docComment;class#MainLayout#0" expanded="false" />
                     <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
@@ -111,6 +127,19 @@
                     <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
                     <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
                     <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HandleRecordsPanel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="506">
+                  <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+                  <folding>
+                    <element signature="method#buildTitlePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+                    <element signature="class#ButtonClick#0;class#HandleRecordsPanel#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -137,7 +166,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/mainLayout.java" />
         <option value="$PROJECT_DIR$/src/Login.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/FirstPanel.java" />
         <option value="$PROJECT_DIR$/src/SecondPanel.java" />
         <option value="$PROJECT_DIR$/src/ResetPasswordPanel.java" />
@@ -145,6 +173,7 @@
         <option value="$PROJECT_DIR$/src/ProgressBar.java" />
         <option value="$PROJECT_DIR$/src/MainLayout.java" />
         <option value="$PROJECT_DIR$/src/SearchRecordsPanel.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/HandleRecordsPanel.java" />
       </list>
     </option>
@@ -156,9 +185,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="848" />
-    <option name="width" value="1932" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -185,8 +215,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,11 +251,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -739,11 +769,12 @@
       <workItem from="1481282767007" duration="7514000" />
       <workItem from="1481425445680" duration="16336000" />
       <workItem from="1481526724576" duration="2279000" />
+      <workItem from="1481530157833" duration="3261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26129000" />
+    <option name="totallyTimeSpent" value="29390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -755,8 +786,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="848" y="0" width="1932" height="1047" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -765,12 +796,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18743229" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18818381" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1388889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -853,9 +884,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding>
+            <element signature="method#buildTitlePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+            <element signature="class#ButtonClick#0;class#HandleRecordsPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="170" column="58" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="58" />
+          <folding>
+            <element signature="docComment;class#MainLayout#0" expanded="false" />
+            <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StatisticsGradeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#StatisticsGradeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SearchRecordsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-          <folding />
+          <folding>
+            <element signature="method#buildTitlePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+            <element signature="class#ButtonClick#0;class#HandleRecordsPanel#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -898,8 +987,8 @@
         <state relative-caret-position="1826">
           <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
           <folding>
-            <element signature="e#3182#3183#0" expanded="true" />
-            <element signature="e#3215#3216#0" expanded="true" />
+            <element signature="e#3182#3183#0" expanded="false" />
+            <element signature="e#3215#3216#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -945,7 +1034,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#buildTitlePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+            <element signature="class#ButtonClick#0;class#HandleRecordsPanel#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,13 +1127,13 @@
         <state relative-caret-position="572">
           <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#930#931#0" expanded="false" />
+            <element signature="e#982#983#0" expanded="false" />
+            <element signature="e#1009#1010#0" expanded="false" />
+            <element signature="e#1034#1035#0" expanded="false" />
+            <element signature="e#1089#1090#0" expanded="false" />
+            <element signature="e#1122#1123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1053,28 +1145,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
-            <element signature="e#3182#3183#0" expanded="true" />
-            <element signature="e#3215#3216#0" expanded="true" />
+            <element signature="e#3182#3183#0" expanded="false" />
+            <element signature="e#3215#3216#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="550">
           <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1092,8 +1176,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="170" column="58" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="58" />
+        <state relative-caret-position="176">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
           <folding>
             <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
@@ -1116,11 +1200,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="506">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+          <folding>
+            <element signature="method#buildTitlePanel#0;class#HandleRecordsPanel#0" expanded="false" />
+            <element signature="class#ButtonClick#0;class#HandleRecordsPanel#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
