@@ -3,6 +3,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.Statement;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,11 +15,21 @@ import javax.swing.JTextField;
 
 
 public class LoginLayout extends JFrame{
+    //私有控件
     private static final long serialVersionUID = 2236421765412062610L;
     private JButton sure,close;
     private JTextField userName,password;
     private JLabel userNameLabel,passwordLabel;
     private JPanel southPanel,centerPanel,northPanel;
+    //数据库
+    Connection conn = null;
+    Statement stmt = null;
+    // JDBC 驱动名及数据库 URL
+    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    static final String DB_URL = "jdbc:mysql://localhost:3306/student";
+
+    static final String USER = "root";
+    static final String PASS = "123456";
     LoginLayout(){
         setTitle("系统登陆");
         setSize(300,200);
@@ -32,7 +44,6 @@ public class LoginLayout extends JFrame{
         add(southPanel,BorderLayout.SOUTH);
 
         createLayout();
-        //pack();
         setVisible(true);
     }
 
