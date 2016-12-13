@@ -34,7 +34,7 @@ public class MainLayout extends JFrame{
     private Thread progressBarControlThread;
     ProgressBar progressBar;
     int progressBarCount = 0;
-    MainLayout(){
+    public MainLayout(){
         /*界面信息初始化*/
         this.setTitle("班级信息管理");
         this.setSize(WINDOW_WIDTH,WINDOW_HEIGHT);

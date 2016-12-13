@@ -21,15 +21,7 @@ public class LoginLayout extends JFrame{
     private JTextField userName,password;
     private JLabel userNameLabel,passwordLabel;
     private JPanel southPanel,centerPanel,northPanel;
-    //数据库
-    Connection conn = null;
-    Statement stmt = null;
-    // JDBC 驱动名及数据库 URL
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/student";
-
-    static final String USER = "root";
-    static final String PASS = "123456";
+    private DBopreation dbopreation;
     LoginLayout(){
         setTitle("系统登陆");
         setSize(300,200);
@@ -45,6 +37,7 @@ public class LoginLayout extends JFrame{
 
         createLayout();
         setVisible(true);
+        dbopreation = new DBopreation();
     }
 
     private void createLayout(){
@@ -79,12 +72,14 @@ public class LoginLayout extends JFrame{
             }else if(passwordValue.length()<1){
                 JOptionPane.showMessageDialog(null, "密码不可为空");
             }else{
-                if(userName.getText().equals("1") && password.getText().equals("1")){
+                if(dbopreation.login(userName.getText(),password.getText())){
+                    //用户登录成功
                     System.out.println("login Success");
                     //关闭当前登陆窗口 开启下一个窗口
                     dispose();
                     new MainLayout();
                 }else{
+                    //用户登录失败
                     JOptionPane.showMessageDialog(null, "用户名密码错误，请输入正确的账号密码");
                     System.out.println("login Failed");
                 }
