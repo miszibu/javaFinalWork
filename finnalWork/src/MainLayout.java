@@ -48,8 +48,9 @@ public class MainLayout extends JFrame{
         //布局设置
         setJMenuBar(menuBar);
         this.add(navigatorPanel, BorderLayout.WEST);
-        this.add(searchRecordsPanel, BorderLayout.CENTER);
+        //this.add(searchRecordsPanel, BorderLayout.CENTER);
         this.add(handleRecordsPanel, BorderLayout.CENTER);
+        //TODO:默认图片
         this.setVisible(true);
     }
 
@@ -114,8 +115,7 @@ public class MainLayout extends JFrame{
         //边框设置
         Border insideBorder = BorderFactory.createEmptyBorder(20, 0, 0, 0);
         Border outsideBorder = BorderFactory.createLoweredBevelBorder();
-        navigatorPanel.setBorder(BorderFactory.createCompoundBorder(
-                outsideBorder, insideBorder));
+        navigatorPanel.setBorder(BorderFactory.createCompoundBorder(outsideBorder, insideBorder));
 
         //设置导航栏固定大小
         navigatorPanel.setPreferredSize(new Dimension(100, 500));
@@ -294,6 +294,7 @@ public class MainLayout extends JFrame{
             }
         }
     }
+
     private void buildProgressBar(){
        /* progressBar = new JProgressBar(JProgressBar.HORIZONTAL, 0, 200);
         progressBar.setPreferredSize(new Dimension(200, 30));

@@ -15,5 +15,7 @@ public class main {
 3.同上，设置表格的时候，发现一直设置不了表格的长宽 有限制，一开始我以为是center就那么大，后来改用流动布局了也还是这样、。
   最后找到问题是设置scrollpane居然 有个默认的长宽，得设置它的长宽才可以。
 4.addrow 出现问题 原因是 创建JTable的时候 一开始找的教程有误，没有先转换为DefaultTableModel，再创建JTable
-
+5.登录 后来发现 密码样式 不对 更改为了JPassword
+6.编译器报错   //state==1?return true:return false;
+7.这里没有加过 唯一的主键 所以我们使用 stdId作为主键
 */

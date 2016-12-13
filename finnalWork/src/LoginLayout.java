@@ -6,19 +6,15 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.Statement;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 
 public class LoginLayout extends JFrame{
     //私有控件
     private static final long serialVersionUID = 2236421765412062610L;
     private JButton sure,close;
-    private JTextField userName,password;
+    private JTextField userName;
+    private JPasswordField password;
     private JLabel userNameLabel,passwordLabel;
     private JPanel southPanel,centerPanel,northPanel;
     private DBopreation dbopreation;
@@ -48,7 +44,7 @@ public class LoginLayout extends JFrame{
         close.addActionListener(new closeClick());
         //同户名 密码设置
         userName = new JTextField("",6);
-        password = new JTextField("",6);
+        password = new JPasswordField("",6);
         userNameLabel = new JLabel("用户名",JLabel.CENTER);
         passwordLabel = new JLabel("密码",JLabel.CENTER);
         passwordLabel.setPreferredSize(new Dimension(40,40));

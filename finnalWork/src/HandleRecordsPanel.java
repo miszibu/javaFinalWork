@@ -22,8 +22,10 @@ public class HandleRecordsPanel extends JPanel{
     private JTable table ;
     private int selectedRowIndex;
     private DefaultTableModel tableModel;
+
     /*String studentCodePattern = "/^[0-9]{1,6}$/";
     Pattern r = Pattern.compile(studentCodePattern);*/
+
     public HandleRecordsPanel(){
         // 第一个主内容布局
         //布局控件初始化
@@ -59,22 +61,11 @@ public class HandleRecordsPanel extends JPanel{
 
     //表格panel 设置
     private void buildTablePanel(){
+        //数据库获取 数据
+        DBopreation dbopreation = new DBopreation();
+        String[][] data = dbopreation.searchAllStudentInfo();
         tablePanel =  new JPanel();
-        //TODO：真实数据获取
         String[] columnNames = {"学号", "姓名", "性别", "语文","数学","英语"};
-        String[][] data = {
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-                {"10000001", "aaa", "female", "87","70","92"},
-        };
         //table 初始化 创建对应点击事件
         table = new JTable(new DefaultTableModel(data, columnNames));
         table.addMouseListener(new tableListener());
@@ -142,7 +133,7 @@ public class HandleRecordsPanel extends JPanel{
             //数据校验
             try{
                 if(operationTextField[0].getText().length()>15){
-                    //正则匹配 拿到书再做
+                    //TODO:正则匹配 拿到书再做
                     return;
                 }else if(operationTextField[1].getText().length()>10 || operationTextField[1].getText().length()<2){
                     JOptionPane.showMessageDialog(null,"名字长度不合法","",2);
@@ -174,33 +165,49 @@ public class HandleRecordsPanel extends JPanel{
                         }
                         arr[i] = String.valueOf(operationTextField[i].getText());
                     }
-                    // 添加数据到表格
-                    tableModel.addRow(arr);
-                    // 更新表格
-                    table.invalidate();
-                    JOptionPane.showMessageDialog(null, "添加成功");
+                    DBopreation dbopreation = new DBopreation();
+                    if(dbopreation.addStudentInfo(arr)){
+                        // 添加数据到表格  更新表格
+                        tableModel.addRow(arr);
+                        table.invalidate();
+                        JOptionPane.showMessageDialog(null, "添加成功");
+                    }else{
+                        JOptionPane.showMessageDialog(null, "添加失败","请重试",2);
+                    }
                 }catch (Exception ez){
                     System.out.print(ez.getMessage());
                 }
-                //TODO :数据库添加一行
+
             }else if(e.getActionCommand().equals("修改")){
+                String[] modifyData = new String[columnList.length];
                 for(int i = 0;i<columnList.length;i++){
+                    modifyData[i] = operationTextField[i].getText();
                     if(operationTextField[i].getText().equals("")){
                         JOptionPane.showMessageDialog(null, "内容不可有空","",2);
                         return;
                     }
                 }
-                for(int i = 0;i<columnList.length;i++) {
-                    table.setValueAt(operationTextField[i].getText(),selectedRowIndex,i);
+                DBopreation dbopreation = new DBopreation();
+                if(dbopreation.updateStudentInfo(modifyData)){
+                    for(int i = 0;i<columnList.length;i++) {
+                        table.setValueAt(operationTextField[i].getText(),selectedRowIndex,i);
+                    }
+                    JOptionPane.showMessageDialog(null, "修改成功");
+                }else{
+                    JOptionPane.showMessageDialog(null, "修改失败","请重试",2);
                 }
-                //TODO: 数据库修改
             }else if(e.getActionCommand().equals("删除")){
                 if(selectedRowIndex+1>=table.getRowCount()){
                     JOptionPane.showMessageDialog(null, "该行不存在","",2);
                     return ;
                 }
-                tableModel.removeRow(selectedRowIndex);
-                //TODO: 数据库删除
+                DBopreation dbopreation = new DBopreation();
+                if(dbopreation.deleteStudentInfo((String)table.getValueAt(selectedRowIndex, 0))){
+                    tableModel.removeRow(selectedRowIndex);
+                    JOptionPane.showMessageDialog(null, "删除成功");
+                }else{
+                    JOptionPane.showMessageDialog(null, "删除失败","请重试",2);
+                }
             }
         }
     }
@@ -220,25 +227,21 @@ public class HandleRecordsPanel extends JPanel{
         @Override
         public void mousePressed(MouseEvent e) {
             // 鼠标按下时的处理
-            System.out.print(1);
         }
 
         @Override
         public void mouseReleased(MouseEvent e) {
             // 鼠标松开时的处理
-            System.out.print(1);
         }
 
         @Override
         public void mouseEntered(MouseEvent e) {
             // 鼠标进入表格时的处理
-            System.out.print(1);
         }
 
         @Override
         public void mouseExited(MouseEvent e) {
             // 鼠标退出表格时的处理
-            System.out.print(1);
         }
     }
 }
