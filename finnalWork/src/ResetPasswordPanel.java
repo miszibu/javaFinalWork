@@ -16,7 +16,7 @@ public class ResetPasswordPanel extends JPanel {
     private JPanel titlePanel,buttonPanel,contentPanel;
     private JButton sure;
     private JLabel[] textLabel =  new JLabel[3];
-    private JTextField[] passwordTextField = new JTextField[3];
+    private JPasswordField[] passwordTextField = new JPasswordField[3];
     private JPanel[] passwordPanel = new JPanel[3];
     public ResetPasswordPanel(){
         // 第一个主内容布局
@@ -60,7 +60,7 @@ public class ResetPasswordPanel extends JPanel {
         textLabel[1] = new JLabel("请输入新密码");
         textLabel[2] = new JLabel("再次输入新密码");
         for (int i =0;i<textLabel.length;i++){
-            passwordTextField[i] = new JTextField(10);
+            passwordTextField[i] = new JPasswordField(10);
             passwordPanel[i] = new JPanel();
             passwordPanel[i].add(textLabel[i]);
             passwordPanel[i].add(passwordTextField[i]);
@@ -75,7 +75,23 @@ public class ResetPasswordPanel extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            //TODO:更新密码 数据库
+            //TODO:获取 全局的账号密码
+            DBopreation dbopreation = new DBopreation();
+            //旧密码验证通过
+            if(passwordTextField[0].getText().equals(dbopreation.getPassword("admin"))){
+                //两次新密码验证
+                if(passwordTextField[1].getText().equals(passwordTextField[2].getText())){
+                    if(dbopreation.updatePassword("admin",passwordTextField[1].getText())){
+                        JOptionPane.showMessageDialog(null, "更新密码成功");
+                    }else{
+                        JOptionPane.showMessageDialog(null, "更新密码失败","请重试",2);
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "新密码不同","请填写相同的新密码",2);
+                }
+            }else {
+                JOptionPane.showMessageDialog(null, "原密码错误","请填写正确的密码",2);
+            }
         }
     }
 }

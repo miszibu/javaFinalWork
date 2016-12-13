@@ -159,6 +159,34 @@ public class DBopreation {
         return highestGrade;
     }
 
+    //根据 账号名字 查询密码
+    protected static  String getPassword(String username){
+        String password = "";
+        String sqlSearchPassword = "select password from security where userName = '"+username+"'";
+        try {
+            res = statement.executeQuery(sqlSearchPassword);
+            res.next();
+            password = res.getString("password");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return password;
+    }
 
+    //更新密码
+    protected static Boolean updatePassword(String username,String password){
+        int state = 0;
+        String sqlUpdatePassword = "update security set password = '"+password+"' where userName ='"+username+"'";
+        try {
+            state =  statement.executeUpdate(sqlUpdatePassword);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(state==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
     //TODO:销毁创建的连接 destory
 }
