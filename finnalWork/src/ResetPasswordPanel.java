@@ -78,10 +78,10 @@ public class ResetPasswordPanel extends JPanel {
             //TODO:获取 全局的账号密码
             DBopreation dbopreation = new DBopreation();
             //旧密码验证通过
-            if(passwordTextField[0].getText().equals(dbopreation.getPassword("admin"))){
+            if(passwordTextField[0].getText().equals(dbopreation.getPassword(main.username))){
                 //两次新密码验证
                 if(passwordTextField[1].getText().equals(passwordTextField[2].getText())){
-                    if(dbopreation.updatePassword("admin",passwordTextField[1].getText())){
+                    if(dbopreation.updatePassword(main.username,passwordTextField[1].getText())){
                         JOptionPane.showMessageDialog(null, "更新密码成功");
                     }else{
                         JOptionPane.showMessageDialog(null, "更新密码失败","请重试",2);

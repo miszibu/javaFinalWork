@@ -1,6 +1,7 @@
 
 public class main {
-
+    protected static String username;
+    protected static String password;
     public static void main(String[] args) {
         // TODO Auto-generated method stub
          new LoginLayout();

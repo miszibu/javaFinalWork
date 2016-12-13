@@ -42,11 +42,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainLayout.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MainLayout.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="91">
-                  <caret line="286" column="48" selection-start-line="286" selection-start-column="48" selection-end-line="286" selection-end-column="48" />
+                <state relative-caret-position="149">
+                  <caret line="297" column="54" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="54" />
                   <folding>
                     <element signature="docComment;class#MainLayout#0" expanded="false" />
                     <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
@@ -69,11 +69,31 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="LoginLayout.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/LoginLayout.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="304">
+                  <caret line="72" column="55" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SearchRecordsPanel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/SearchRecordsPanel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="418">
+                  <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="HandleRecordsPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="501">
-                  <caret line="208" column="72" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="72" />
+                <state relative-caret-position="-181">
+                  <caret line="198" column="56" selection-start-line="198" selection-start-column="56" selection-end-line="198" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
@@ -82,8 +102,8 @@
           <file leaf-file-name="ResetPasswordPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-231">
-                  <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+                <state relative-caret-position="233">
+                  <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -103,7 +123,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="DBopreation.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DBopreation.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DBopreation.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="339">
@@ -139,11 +159,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+                <state relative-caret-position="198">
+                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -173,15 +193,15 @@
         <option value="$PROJECT_DIR$/src/FirstPanel.java" />
         <option value="$PROJECT_DIR$/src/SecondPanel.java" />
         <option value="$PROJECT_DIR$/src/ProgressBar.java" />
-        <option value="$PROJECT_DIR$/src/SearchRecordsPanel.java" />
-        <option value="$PROJECT_DIR$/src/LoginLayout.java" />
         <option value="$PROJECT_DIR$/src/HandleRecordsPanel.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql" />
         <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/MainLayout.java" />
         <option value="$PROJECT_DIR$/src/DBopreation.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/LoginLayout.java" />
         <option value="$PROJECT_DIR$/src/ResetPasswordPanel.java" />
+        <option value="$PROJECT_DIR$/src/SearchRecordsPanel.java" />
       </list>
     </option>
   </component>
@@ -786,8 +806,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.MainLayout" />
-        <item index="1" class="java.lang.String" itemvalue="Application.test" />
-        <item index="2" class="java.lang.String" itemvalue="Application.main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.test" />
         <item index="3" class="java.lang.String" itemvalue="Application.DBopreation" />
         <item index="4" class="java.lang.String" itemvalue="Application.ProgressBar" />
       </list>
@@ -810,12 +830,12 @@
       <workItem from="1481425445680" duration="16336000" />
       <workItem from="1481526724576" duration="2279000" />
       <workItem from="1481530157833" duration="18857000" />
-      <workItem from="1481623460048" duration="15416000" />
+      <workItem from="1481623460048" duration="16018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60402000" />
+    <option name="totallyTimeSpent" value="61004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -838,7 +858,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1928494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1928494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23510292" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1288,22 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1314,26 +1318,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SearchRecordsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="208" column="72" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -1362,18 +1350,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="198" column="56" selection-start-line="198" selection-start-column="56" selection-end-line="198" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="72" column="55" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        <state relative-caret-position="233">
+          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="286" column="48" selection-start-line="286" selection-start-column="48" selection-end-line="286" selection-end-column="48" />
+        <state relative-caret-position="149">
+          <caret line="297" column="54" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="54" />
           <folding>
             <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
@@ -1392,6 +1404,14 @@
             <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
             <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SearchRecordsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>

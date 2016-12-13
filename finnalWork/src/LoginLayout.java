@@ -70,6 +70,8 @@ public class LoginLayout extends JFrame{
             }else{
                 if(dbopreation.login(userName.getText(),password.getText())){
                     //用户登录成功
+                    main.username = userName.getText();
+                    main.password = password.getText();
                     System.out.println("login Success");
                     //关闭当前登陆窗口 开启下一个窗口
                     dispose();

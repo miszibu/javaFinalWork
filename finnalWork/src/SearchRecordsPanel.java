@@ -11,16 +11,18 @@ public class SearchRecordsPanel extends JPanel{
     private JLabel title;
     private JPanel titlePanel;
     private JTextArea searchArea;
+    private JButton sure;
+    private JTable resultTable;
 
     public SearchRecordsPanel(){
-
+        setLayout(new BorderLayout(10,10));
         buildTitle();
-
-        this.add(titlePanel);
+        buildSearchArea();
+        this.add(titlePanel,BorderLayout.NORTH);
     }
 
     //标题panel 创建
-    public void buildTitle(){
+    private void buildTitle(){
         titlePanel = new JPanel();
         titlePanel.setPreferredSize(new Dimension(500, 80));
         titlePanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 0, 0));
@@ -29,4 +31,7 @@ public class SearchRecordsPanel extends JPanel{
         titlePanel.add(title);
     }
 
+    private void buildSearchArea(){
+
+    }
 }
