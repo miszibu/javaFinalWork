@@ -120,5 +120,45 @@ public class DBopreation {
             return false;
         }
     }
+
+    //统计学生 人数
+    protected  static int countStudentNum(){
+        int studentNum = 0;
+        String sqlCountStundentNum = "select count(*) as studentNum from studentinfo";
+        try {
+            res = statement.executeQuery(sqlCountStundentNum);
+            res.next();
+            studentNum = res.getInt("studentNum");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return studentNum;
+    }
+
+    //统计学生的最高分1  最低分2 平均分0
+    protected  static int[] statisticsGrade(int state){
+        int[] highestGrade = new int[3];
+        String sqlSearchHighestGrade = "select MAX(chinese) as chinese,MAX(english) as english,MAX(math) as math from studentinfo";
+        String sqlSearchLowestGrade = "select MIN(chinese) as chinese,MIN(english) as english,AVG(math) as math from studentinfo";
+        String sqlSearchAvgGrade = "select AVG(chinese) as chinese,AVG(english) as english,MIN(math) as math from studentinfo";
+        try {
+            if(state == 0){
+                res = statement.executeQuery(sqlSearchAvgGrade);
+            }else if(state == 1){
+                res = statement.executeQuery(sqlSearchHighestGrade);
+            }else if(state == 2){
+                res = statement.executeQuery(sqlSearchLowestGrade);
+            }
+            res.next();
+            highestGrade[0] = res.getInt("chinese");
+            highestGrade[1] = res.getInt("english");
+            highestGrade[2] = res.getInt("math");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return highestGrade;
+    }
+
+
     //TODO:销毁创建的连接 destory
 }

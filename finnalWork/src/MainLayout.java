@@ -269,8 +269,9 @@ public class MainLayout extends JFrame{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            //TODO:获取真实信息
-            String totalStudentString = "学生人数: "+20+"人";
+            DBopreation dbopreation = new DBopreation();
+            int studentNum = dbopreation.countStudentNum();
+            String totalStudentString = "学生人数: "+studentNum+"人";
             JOptionPane.showMessageDialog(null,totalStudentString,"学生人数",1);
         }
     }
@@ -280,17 +281,21 @@ public class MainLayout extends JFrame{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            String  prientString = "";
-            //TODO:真实数据查询
-            double  a= 70.37,b=54.55,c=54.00;
-            prientString="语文："+a+"\n"+"数学："+b+"\n"+"英语："+c+"\n";
-            System.out.print(e.getActionCommand());
+            String  printString ;
+            DBopreation dbopreation = new DBopreation();
+            int[] grade;
             if(e.getActionCommand().equals("各门课程平均分")){
-                JOptionPane.showMessageDialog(null,prientString,"各科平均分",1);
+                grade = dbopreation.statisticsGrade(0);
+                printString="语文："+grade[0]+"\n"+"英语："+grade[1]+"\n"+"数学："+grade[2]+"\n";
+                JOptionPane.showMessageDialog(null,printString,"各科平均分",1);
             }else if(e.getActionCommand().equals("各门课程最高分")){
-                JOptionPane.showMessageDialog(null,prientString,"各科最高分",1);
+                grade = dbopreation.statisticsGrade(1);
+                printString="语文："+grade[0]+"\n"+"英语："+grade[1]+"\n"+"数学："+grade[2]+"\n";
+                JOptionPane.showMessageDialog(null,printString,"各科最高分",1);
             }else if(e.getActionCommand().equals("各门课程最低分")){
-                JOptionPane.showMessageDialog(null,prientString,"各科最低分",1);
+                grade = dbopreation.statisticsGrade(2);
+                printString="语文："+grade[0]+"\n"+"英语："+grade[1]+"\n"+"数学："+grade[2]+"\n";
+                JOptionPane.showMessageDialog(null,printString,"各科最低分",1);
             }
         }
     }

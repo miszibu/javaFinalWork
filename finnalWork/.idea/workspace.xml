@@ -23,6 +23,16 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - @localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -32,23 +42,38 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainLayout.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="MainLayout.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="88">
-                  <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+                <state relative-caret-position="47">
+                  <caret line="281" column="17" selection-start-line="281" selection-start-column="17" selection-end-line="281" selection-end-column="17" />
                   <folding>
+                    <element signature="docComment;class#MainLayout#0" expanded="false" />
                     <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+                    <element signature="class#LabelClick#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#mouseClicked#0;class#LabelClick#0;class#MainLayout#0" expanded="false" />
+                    <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+                    <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+                    <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+                    <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+                    <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+                    <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HandleRecordsPanel.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="HandleRecordsPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="457">
-                  <caret line="209" column="17" selection-start-line="209" selection-start-column="17" selection-end-line="209" selection-end-column="17" />
+                <state relative-caret-position="589">
+                  <caret line="203" column="60" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="60" />
                   <folding />
                 </state>
               </provider>
@@ -67,8 +92,8 @@
           <file leaf-file-name="ResetPasswordPanel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+                <state relative-caret-position="154">
+                  <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
                   <folding>
                     <element signature="method#buildTitle#0;class#ResetPasswordPanel#0" expanded="false" />
                     <element signature="method#buildButtonPanel#0;class#ResetPasswordPanel#0" expanded="false" />
@@ -81,8 +106,8 @@
           <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
             <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="22">
-                  <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -95,13 +120,31 @@
           <file leaf-file-name="DBopreation.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/DBopreation.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
+                <state relative-caret-position="495">
+                  <caret line="138" column="54" selection-start-line="138" selection-start-column="54" selection-end-line="138" selection-end-column="54" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="docComment;class#DBopreation#0" expanded="false" />
+                    <element signature="method#DBopreation#0;class#DBopreation#0" expanded="false" />
                     <element signature="method#login#0;class#DBopreation#0" expanded="false" />
                     <element signature="method#addStudentInfo#0;class#DBopreation#0" expanded="false" />
+                    <element signature="method#updateStudentInfo#0;class#DBopreation#0" expanded="false" />
+                    <element signature="method#deleteStudentInfo#0;class#DBopreation#0" expanded="false" />
+                    <element signature="method#statisticsGrade#0;class#DBopreation#0" expanded="false" />
+                    <marker date="1481636438548" expanded="true" signature="4478:4524" ph="select count... studentinfo" />
+                    <marker date="1481636438548" expanded="true" signature="4955:5044" ph="select MAX(c... studentinfo" />
+                    <marker date="1481636438548" expanded="true" signature="5086:5175" ph="select MIN(c... studentinfo" />
+                    <marker date="1481636438548" expanded="true" signature="5214:5303" ph="select AVG(c... studentinfo" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="72" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="89" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -109,8 +152,8 @@
           <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -142,13 +185,13 @@
         <option value="$PROJECT_DIR$/src/ProgressBar.java" />
         <option value="$PROJECT_DIR$/src/SearchRecordsPanel.java" />
         <option value="$PROJECT_DIR$/src/ResetPasswordPanel.java" />
+        <option value="$PROJECT_DIR$/src/LoginLayout.java" />
+        <option value="$PROJECT_DIR$/src/HandleRecordsPanel.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql" />
         <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/LoginLayout.java" />
-        <option value="$PROJECT_DIR$/src/MainLayout.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/DBopreation.java" />
-        <option value="$PROJECT_DIR$/src/HandleRecordsPanel.java" />
+        <option value="$PROJECT_DIR$/src/MainLayout.java" />
       </list>
     </option>
   </component>
@@ -167,7 +210,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
     <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
@@ -242,7 +284,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="E:\node\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/zibu/Downloads/第十次课(第12、13章Swing程序设计、事件处理)/lecture12/lecture12/src/MenuWindow.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/zibu/Desktop/javaFinalWork/finnalWork/src/HandleRecordsPanel.java" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -754,8 +796,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.MainLayout" />
-        <item index="1" class="java.lang.String" itemvalue="Application.main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.test" />
+        <item index="1" class="java.lang.String" itemvalue="Application.test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.main" />
         <item index="3" class="java.lang.String" itemvalue="Application.DBopreation" />
         <item index="4" class="java.lang.String" itemvalue="Application.ProgressBar" />
       </list>
@@ -778,12 +820,12 @@
       <workItem from="1481425445680" duration="16336000" />
       <workItem from="1481526724576" duration="2279000" />
       <workItem from="1481530157833" duration="18857000" />
-      <workItem from="1481623460048" duration="9785000" />
+      <workItem from="1481623460048" duration="12979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54771000" />
+    <option name="totallyTimeSpent" value="57965000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -795,7 +837,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="1" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -812,7 +854,7 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23510292" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1340812" sideWeight="0.49429038" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06410257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06410257" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -867,7 +909,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -881,7 +923,22 @@
         <state relative-caret-position="550">
           <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
           <folding>
+            <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -920,8 +977,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -980,7 +1035,22 @@
         <state relative-caret-position="1078">
           <caret line="170" column="58" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="58" />
           <folding>
+            <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1031,7 +1101,22 @@
         <state relative-caret-position="1078">
           <caret line="170" column="58" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="58" />
           <folding>
+            <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1057,7 +1142,22 @@
         <state relative-caret-position="330">
           <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
           <folding>
+            <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1200,31 +1300,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,10 +1316,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf6acff5-e2f8-4c77-b88d-30d1df161228/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="72" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ResetPasswordPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="154">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
             <element signature="method#buildTitle#0;class#ResetPasswordPanel#0" expanded="false" />
             <element signature="method#buildButtonPanel#0;class#ResetPasswordPanel#0" expanded="false" />
@@ -1248,41 +1354,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
+    <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="589">
+          <caret line="203" column="60" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="60" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBopreation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="109" column="43" selection-start-line="109" selection-start-column="43" selection-end-line="109" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#login#0;class#DBopreation#0" expanded="false" />
-            <element signature="method#addStudentInfo#0;class#DBopreation#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="47">
+          <caret line="281" column="17" selection-start-line="281" selection-start-column="17" selection-end-line="281" selection-end-column="17" />
           <folding>
+            <element signature="docComment;class#MainLayout#0" expanded="false" />
             <element signature="method#MainLayout#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildMenuBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildNavigatorPanel#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildOtherPanels#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#mouseClicked#0;class#LabelClick#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#SystemStyleChangeListener#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#FileImport#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ExitSystem#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#StudentNumCount#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#buildProgressBar#0;class#MainLayout#0" expanded="false" />
+            <element signature="class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
+            <element signature="method#run#0;class#ProgressBarControlThread#0;class#MainLayout#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HandleRecordsPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/DBopreation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="209" column="17" selection-start-line="209" selection-start-column="17" selection-end-line="209" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="495">
+          <caret line="138" column="54" selection-start-line="138" selection-start-column="54" selection-end-line="138" selection-end-column="54" />
+          <folding>
+            <element signature="docComment;class#DBopreation#0" expanded="false" />
+            <element signature="method#DBopreation#0;class#DBopreation#0" expanded="false" />
+            <element signature="method#login#0;class#DBopreation#0" expanded="false" />
+            <element signature="method#addStudentInfo#0;class#DBopreation#0" expanded="false" />
+            <element signature="method#updateStudentInfo#0;class#DBopreation#0" expanded="false" />
+            <element signature="method#deleteStudentInfo#0;class#DBopreation#0" expanded="false" />
+            <element signature="method#statisticsGrade#0;class#DBopreation#0" expanded="false" />
+            <marker date="1481636438548" expanded="true" signature="4478:4524" ph="select count... studentinfo" />
+            <marker date="1481636438548" expanded="true" signature="4955:5044" ph="select MAX(c... studentinfo" />
+            <marker date="1481636438548" expanded="true" signature="5086:5175" ph="select MIN(c... studentinfo" />
+            <marker date="1481636438548" expanded="true" signature="5214:5303" ph="select AVG(c... studentinfo" />
+          </folding>
         </state>
       </provider>
     </entry>

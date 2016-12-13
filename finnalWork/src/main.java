@@ -18,4 +18,17 @@ public class main {
 5.登录 后来发现 密码样式 不对 更改为了JPassword
 6.编译器报错   //state==1?return true:return false;
 7.这里没有加过 唯一的主键 所以我们使用 stdId作为主键
+8:这个是真的烦
+String sqlCountStundentNum = "select count(*) as studentNum from studentinfo";
+        try {
+
+            res = statement.executeQuery(sqlCountStundentNum);
+            res.next();
+            //System.out.print(res);
+            System.out.print(res.getInt("studentNum"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+ res.getInt("studentNum") 一直报错 我去数据库查询了下sql没问题，结果是使用res.getInt()之前 要先调用res.next()
+9.
 */
