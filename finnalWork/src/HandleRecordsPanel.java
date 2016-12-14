@@ -197,7 +197,9 @@ public class HandleRecordsPanel extends JPanel{
                     JOptionPane.showMessageDialog(null, "修改失败","请重试",2);
                 }
             }else if(e.getActionCommand().equals("删除")){
-                if(selectedRowIndex+1>=table.getRowCount()){
+                if(selectedRowIndex+1>table.getRowCount()){
+                    System.out.print(selectedRowIndex);
+                    System.out.print(table.getRowCount());
                     JOptionPane.showMessageDialog(null, "该行不存在","",2);
                     return ;
                 }

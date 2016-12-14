@@ -15,7 +15,7 @@ public class MainLayout extends JFrame{
     private int WINDOW_WIDTH = 1000;
     private int WINDOW_HEIGHT = 600;
     //主体 控件
-    private JPanel navigatorPanel;
+    private JPanel navigatorPanel,defaultPanel;
     private JLabel handleRecordsLabel,searchRecordsLabel,resetPasswordLabel;
     private SearchRecordsPanel searchRecordsPanel;
     private HandleRecordsPanel handleRecordsPanel;
@@ -45,12 +45,13 @@ public class MainLayout extends JFrame{
         // 创建panel
         buildNavigatorPanel();
         buildOtherPanels();
+        buildDefaultPanel();
         //布局设置
         setJMenuBar(menuBar);
         this.add(navigatorPanel, BorderLayout.WEST);
         //this.add(searchRecordsPanel, BorderLayout.CENTER);
-        this.add(handleRecordsPanel, BorderLayout.CENTER);
-        //TODO:默认图片
+        //this.add(handleRecordsPanel, BorderLayout.CENTER);
+        this.add(defaultPanel,BorderLayout.CENTER);
         this.setVisible(true);
     }
 
@@ -155,6 +156,13 @@ public class MainLayout extends JFrame{
         //重置密码panel 默认false
         resetPasswordPanel = new ResetPasswordPanel();
         resetPasswordPanel.setVisible(false);
+    }
+
+    //创建 默认显示panel
+    private void buildDefaultPanel(){
+        defaultPanel = new JPanel();
+        defaultPanel.setLayout(new FlowLayout());
+        defaultPanel.add(new JLabel("欢迎使用腿腿系统"));
     }
 
     //左侧导航栏 点击事件函数

@@ -45,25 +45,34 @@ public class DBopreation {
 
     //查询所有学生信息
     protected static String[][] searchAllStudentInfo(){
-        int i = 0;
-        //TODO:数据长度 没有动态
-        String[][] data = new String[4][7];
+        int lineNum = 0;
+        String[][] data = new String[100][6];
+        String[][] returnData;
         try {
             String newSearchSql = sqlSelectAllStudent;
             res = statement.executeQuery(newSearchSql);
             while(res.next()){
-                data[i][0]=res.getString("stuId");
-                data[i][1]=res.getString("name");
-                data[i][2]=res.getString("gender");
-                data[i][3]=String.valueOf(res.getInt("chinese"));
-                data[i][4]=String.valueOf(res.getInt("english"));
-                data[i][5]=String.valueOf(res.getInt("math"));
-                i++;
+                data[lineNum][0]=res.getString("stuId");
+                data[lineNum][1]=res.getString("name");
+                data[lineNum][2]=res.getString("gender");
+                data[lineNum][3]=String.valueOf(res.getInt("chinese"));
+                data[lineNum][4]=String.valueOf(res.getInt("english"));
+                data[lineNum][5]=String.valueOf(res.getInt("math"));
+                lineNum++;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return  data;
+        returnData = new String[lineNum][6];
+        for (int i=0;i<lineNum;i++){
+            returnData[i][0] = data[i][0];
+            returnData[i][1] = data[i][1];
+            returnData[i][2] = data[i][2];
+            returnData[i][3] = data[i][3];
+            returnData[i][4] = data[i][4];
+            returnData[i][5] = data[i][5];
+        }
+        return  returnData;
     }
 
     //学生表 插入一个学生信息
@@ -71,7 +80,6 @@ public class DBopreation {
         int state = 0;
         String newSql = sqlAddStudent;
         newSql +=" ('"+studentInfoArr[0]+"', '"+studentInfoArr[1]+"', '"+studentInfoArr[2]+"', '"+studentInfoArr[3]+"', '"+studentInfoArr[4]+"', '"+studentInfoArr[5]+"')";
-        System.out.println(newSql);
         try {
             state = statement.executeUpdate(newSql);
         } catch (SQLException e) {

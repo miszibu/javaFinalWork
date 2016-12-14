@@ -98,8 +98,4 @@ public class LoginLayout extends JFrame{
 		new LoginLayout();
 	}*/
 
-    public void createLoginLayout(){
-        new LoginLayout();
-    }
-
 }

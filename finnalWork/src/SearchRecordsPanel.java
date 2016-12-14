@@ -81,6 +81,7 @@ public class SearchRecordsPanel extends JPanel{
         scrollPane.setPreferredSize(new Dimension(600,300));
     }
 
+    //确认点击函数
     private class SureClickListener implements ActionListener{
 
         @Override

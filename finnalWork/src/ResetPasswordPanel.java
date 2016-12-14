@@ -54,12 +54,12 @@ public class ResetPasswordPanel extends JPanel {
     //内容布局 创建
     private void buildContextPanel(){
         contentPanel = new JPanel();
-        //contentPanel.setLayout(new BorderLayout(10,10));
 
         textLabel[0] = new JLabel("请输入旧密码");
         textLabel[1] = new JLabel("请输入新密码");
         textLabel[2] = new JLabel("再次输入新密码");
         for (int i =0;i<textLabel.length;i++){
+            textLabel[i].setPreferredSize(new Dimension(100,40));
             passwordTextField[i] = new JPasswordField(10);
             passwordPanel[i] = new JPanel();
             passwordPanel[i].add(textLabel[i]);
