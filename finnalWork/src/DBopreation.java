@@ -188,5 +188,36 @@ public class DBopreation {
             return false;
         }
     }
+
+    //对指定sql语句进行查询
+    protected static String[][] searchStudent(String sql){
+        String[][] searchResult = new String[100][6];
+        String[][] returnData ;
+        int lineNum = 0;
+        try {
+            res = statement.executeQuery(sql);
+            while(res.next()){
+                searchResult[lineNum][0]=res.getString("stuId");
+                searchResult[lineNum][1]=res.getString("name");
+                searchResult[lineNum][2]=res.getString("gender");
+                searchResult[lineNum][3]=String.valueOf(res.getInt("chinese"));
+                searchResult[lineNum][4]=String.valueOf(res.getInt("english"));
+                searchResult[lineNum][5]=String.valueOf(res.getInt("math"));
+                lineNum++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        returnData = new String[lineNum][6];
+        for (int i = 0;i<lineNum;i++){
+            returnData[i][0] = searchResult[i][0];
+            returnData[i][1] = searchResult[i][1];
+            returnData[i][2] = searchResult[i][2];
+            returnData[i][3] = searchResult[i][3];
+            returnData[i][4] = searchResult[i][4];
+            returnData[i][5] = searchResult[i][5];
+        }
+        return returnData;
+    }
     //TODO:销毁创建的连接 destory
 }
