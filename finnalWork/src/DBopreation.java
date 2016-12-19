@@ -129,6 +129,31 @@ public class DBopreation {
         }
     }
 
+    //导入studentinfo表  删除studentinfo表 再导入新数据
+    protected static  Boolean deleteAndUpdatteStudentInfo(String[][] studentInfoArr,int length){
+        int state1 = 0;
+        int i = 0;
+        String deleteSql = "Truncate table studentinfo";
+        //删除studentinfo 表
+        try {
+            state1 = statement.executeUpdate(deleteSql);
+            for (int j =0;j<length;j++){
+                String updateSql=sqlAddStudent;
+                updateSql +=" ('"+studentInfoArr[i][0]+"', '"+studentInfoArr[i][1]+"', '"+studentInfoArr[i][2]+"', '"+studentInfoArr[i][3]+"', '"+studentInfoArr[i][4]+"', '"+studentInfoArr[i][5]+"')";
+                i++;
+                statement.executeUpdate(updateSql);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(state1==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     //统计学生 人数
     protected  static int countStudentNum(){
         int studentNum = 0;

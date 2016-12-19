@@ -1,3 +1,5 @@
+import com.sun.xml.internal.fastinfoset.util.CharArray;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
@@ -5,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.File;
+import java.io.*;
 
 /**
  * Created by zibu on 2016/12/9.
@@ -152,7 +154,7 @@ public class MainLayout extends JFrame{
         searchRecordsPanel.setVisible(false);
         //默认显示处理记录panel
         handleRecordsPanel = new HandleRecordsPanel();
-        handleRecordsPanel.setVisible(true);
+        handleRecordsPanel.setVisible(false);
         //重置密码panel 默认false
         resetPasswordPanel = new ResetPasswordPanel();
         resetPasswordPanel.setVisible(false);
@@ -163,12 +165,14 @@ public class MainLayout extends JFrame{
         defaultPanel = new JPanel();
         defaultPanel.setLayout(new FlowLayout());
         defaultPanel.add(new JLabel("欢迎使用腿腿系统"));
+        defaultPanel.setVisible(true);
     }
 
     //左侧导航栏 点击事件函数
     private class LabelClick extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {
+            defaultPanel.setVisible(false);
             if (e.getSource() == handleRecordsLabel) {
                 // 将被点击label设置为红色
                 resetPasswordLabel.setForeground(Color.black);
@@ -253,13 +257,60 @@ public class MainLayout extends JFrame{
             //用户点击了 OK按钮
             if (status == JFileChooser.APPROVE_OPTION)
             {
-                File selectedFile = fileChooser.getSelectedFile();
-                String filename = selectedFile.getPath();
-                JOptionPane.showMessageDialog(null, "You selected " + filename);
+                //开启进度条线程
                 progressBar = new ProgressBar();
                 progressBarControlThread = new Thread(new ProgressBarControlThread());
                 progressBarControlThread.start();
-                //TODO:数据库 存储 线程关闭
+                //文件参数
+                String[][] fileDataArray = new String[100][6];
+                int i=0 , j = 0;
+                File selectedFile = fileChooser.getSelectedFile();
+                //文件长度 以字节为单位 获取文件长度 和 已读文件长度
+                long fileSize = selectedFile.length();
+                long readSize = 0;
+                String filename = selectedFile.getPath();
+                //System.out.println(filename);
+
+                /*```````````````````````````文件读取`````````````````````````````````*/
+                try {
+                    FileInputStream inputFile=new FileInputStream(selectedFile);
+                    int ch = inputFile.read();
+
+                    // 当该字节的内容不是-1，表示没有到达文件末尾
+                    String temp = "";
+                    while(ch!=-1){
+                        //该字节不为空格
+                        if(ch == 13 || ch==10){
+                            //对回车 换行不理会
+                        }else if(ch!=32){
+                            temp+=(char)ch;
+                        }else{
+                            fileDataArray[i][j++] = temp;
+                            if(j>=6){
+                                i++; j=0;
+                            }
+                            temp="";
+                        }
+                        //一个ch两个字节
+                        ch = inputFile.read();
+                        readSize+=1*100;//让结果*100
+                        progressBarCount = Integer.parseInt(String.valueOf(readSize / fileSize))-1;
+                        System.out.println();
+                    }
+                    if(inputFile!=null){
+                           inputFile.close();
+                    }
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                //数据库操作
+                DBopreation dbopreation = new DBopreation();
+                dbopreation.deleteAndUpdatteStudentInfo(fileDataArray,i);
+                //数据库设置完才设置100
+                progressBarCount=100;
+                //JOptionPane.showMessageDialog(null, "You selected " + filename);
             }
         }
     }
@@ -324,7 +375,7 @@ public class MainLayout extends JFrame{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                progressBar.changeValue(++progressBarCount);
+                progressBar.changeValue(progressBarCount);
                 //导入完成关闭 滑动条窗口
                 if(progressBarCount>=100){
                     JOptionPane.showMessageDialog(null, "导入成功");

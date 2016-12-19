@@ -18,6 +18,7 @@ public class LoginLayout extends JFrame{
     private JLabel userNameLabel,passwordLabel;
     private JPanel southPanel,centerPanel,northPanel;
     private DBopreation dbopreation;
+
     LoginLayout(){
         setTitle("系统登陆");
         setSize(300,200);

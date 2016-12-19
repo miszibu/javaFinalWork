@@ -18,8 +18,8 @@ public class main {
 4.addrow 出现问题 原因是 创建JTable的时候 一开始找的教程有误，没有先转换为DefaultTableModel，再创建JTable
 5.登录 后来发现 密码样式 不对 更改为了JPassword
 6.编译器报错   //state==1?return true:return false;
-7.这里没有加过 唯一的主键 所以我们使用 stdId作为主键
-8:这个是真的烦
+7.这里没有加过主键 所以我们使用 stdId作为主键
+8:这个问题一开始一直找不出来
 String sqlCountStundentNum = "select count(*) as studentNum from studentinfo";
         try {
 
@@ -31,5 +31,8 @@ String sqlCountStundentNum = "select count(*) as studentNum from studentinfo";
             e.printStackTrace();
         }
  res.getInt("studentNum") 一直报错 我去数据库查询了下sql没问题，结果是使用res.getInt()之前 要先调用res.next()
-9.
+9.在导入文件的时候 原来的文件是用navicat导出的文件，然后读取一直报错，后来发现他的格式有点不同
+是一个tab这样的，读取有问题，我就自己写了个txt进行读取。
+10.进度条的进度的显示 我先获取文件的长度，然后更新实时的读取百分比更新。 然而因为文件大小的原因，读取会在一瞬间完成，一次很难看到效果。
+
 */
