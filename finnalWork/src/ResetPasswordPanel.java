@@ -82,15 +82,15 @@ public class ResetPasswordPanel extends JPanel {
                 //两次新密码验证
                 if(passwordTextField[1].getText().equals(passwordTextField[2].getText())){
                     if(dbopreation.updatePassword(main.username,passwordTextField[1].getText())){
-                        JOptionPane.showMessageDialog(null, "更新密码成功");
+                        JOptionPane.showMessageDialog(ResetPasswordPanel.this, "更新密码成功");
                     }else{
-                        JOptionPane.showMessageDialog(null, "更新密码失败","请重试",2);
+                        JOptionPane.showMessageDialog(ResetPasswordPanel.this, "更新密码失败","请重试",2);
                     }
                 }else{
-                    JOptionPane.showMessageDialog(null, "新密码不同","请填写相同的新密码",2);
+                    JOptionPane.showMessageDialog(ResetPasswordPanel.this, "新密码不同","请填写相同的新密码",2);
                 }
             }else {
-                JOptionPane.showMessageDialog(null, "原密码错误","请填写正确的密码",2);
+                JOptionPane.showMessageDialog(ResetPasswordPanel.this, "原密码错误","请填写正确的密码",2);
             }
         }
     }

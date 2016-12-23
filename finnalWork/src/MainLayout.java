@@ -36,6 +36,7 @@ public class MainLayout extends JFrame{
     private Thread progressBarControlThread;
     ProgressBar progressBar;
     int progressBarCount = 0;
+
     public MainLayout(){
         /*界面信息初始化*/
         this.setTitle("班级信息管理");
@@ -68,6 +69,7 @@ public class MainLayout extends JFrame{
         fileMenuItem[0] = new JMenuItem("从文件导入");
         fileMenuItem[0].addActionListener(new FileImport());
         fileMenuItem[1] = new JMenuItem("导出到文件");
+        fileMenuItem[1].addActionListener(new FileExport());
         fileMenuItem[2] = new JMenuItem("退出系统");
         fileMenuItem[2].addActionListener(new ExitSystem());
         fileMenu.add(fileMenuItem[0]);
@@ -162,9 +164,14 @@ public class MainLayout extends JFrame{
 
     //创建 默认显示panel
     private void buildDefaultPanel(){
-        defaultPanel = new JPanel();
-        defaultPanel.setLayout(new FlowLayout());
-        defaultPanel.add(new JLabel("欢迎使用腿腿系统"));
+        defaultPanel = new JPanel() {
+            protected void paintComponent(Graphics g) {
+                ImageIcon icon = new ImageIcon("background.jpg");
+                Image img = icon.getImage();
+                g.drawImage(img, 0, 0, defaultPanel.getWidth(),
+                        defaultPanel.getHeight(), icon.getImageObserver());
+            }
+        };
         defaultPanel.setVisible(true);
     }
 
@@ -270,7 +277,6 @@ public class MainLayout extends JFrame{
                 long readSize = 0;
                 String filename = selectedFile.getPath();
                 //System.out.println(filename);
-
                 /*```````````````````````````文件读取`````````````````````````````````*/
                 try {
                     FileInputStream inputFile=new FileInputStream(selectedFile);
@@ -311,6 +317,45 @@ public class MainLayout extends JFrame{
                 //数据库设置完才设置100
                 progressBarCount=100;
                 //JOptionPane.showMessageDialog(null, "You selected " + filename);
+            }
+        }
+    }
+
+    //文件导出 对应事件函数
+    private class FileExport implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // 创建文件选择器，初始化路径
+            JFileChooser fileChooser = new JFileChooser();
+            // 显示打开文件对话框
+            int	status = fileChooser.showSaveDialog(MainLayout.this);
+            // 如果用户点击"打开"按钮
+            if (status == JFileChooser.APPROVE_OPTION) {
+                String[][] studentInfoData;
+                // 获取用户所选择的文件对象
+                File selectedFile = fileChooser.getSelectedFile();
+                //获取数据
+                DBopreation dbopreation = new DBopreation();
+                studentInfoData=dbopreation.searchAllStudentInfo();
+                //输出到文件
+                try {
+                    FileOutputStream inputFile=new FileOutputStream(selectedFile);
+                    for(int i =0;i<studentInfoData.length;i++){
+                        for(int j =0;j<6;j++){
+                            inputFile.write(studentInfoData[i][j].getBytes());
+                            inputFile.write(" ".getBytes());
+                        }
+                        inputFile.write("\r\n".getBytes());
+                    }
+                    inputFile.close();
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                JOptionPane.showMessageDialog(MainLayout.this, "文件已成功写至"+selectedFile);
+
             }
         }
     }

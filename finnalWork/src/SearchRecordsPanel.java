@@ -87,13 +87,15 @@ public class SearchRecordsPanel extends JPanel{
         @Override
         public void actionPerformed(ActionEvent e) {
             if(searchArea.getText().equals("")){
-                JOptionPane.showMessageDialog(null,"查询语句不可为空","",2);
+                JOptionPane.showMessageDialog(SearchRecordsPanel.this,"查询语句不可为空","",2);
+            }else if(!searchArea.getText().matches (".*select.*|.*SELECT.*")){
+                JOptionPane.showMessageDialog(SearchRecordsPanel.this,"sql不是查询语句","",2);
             }else{
                 //清空原有数据
-                for(int i = 0 ;i<resultTable.getRowCount();i++){
-                    tableModel.removeRow(i);
+                int  num = resultTable.getRowCount();
+                for(int i = 0 ;i<num;i++){
+                    tableModel.removeRow(0);
                 }
-                //TODO:判断是不是select 语句 防止sql注入
                 DBopreation dbopreation = new DBopreation();
                 searchResult = dbopreation.searchStudent(searchArea.getText());
                 String arr[] = new String[6];

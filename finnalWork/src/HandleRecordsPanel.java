@@ -10,11 +10,11 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 
 
-@SuppressWarnings("serial")
 public class HandleRecordsPanel extends JPanel{
     //私有控件初始化
     private JLabel title;
     private JPanel titlePanel,buttonPanel,tablePanel,operationPanel;
+    private JPanel centerPanel;
     private JLabel[] operationLabel = new JLabel[6];
     private JTextField[] operationTextField = new JTextField[6];
     private JButton sureButton,delButton,modifyButton;
@@ -23,34 +23,33 @@ public class HandleRecordsPanel extends JPanel{
     private int selectedRowIndex;
     private DefaultTableModel tableModel;
 
-    /*String studentCodePattern = "/^[0-9]{1,6}$/";
-    Pattern r = Pattern.compile(studentCodePattern);*/
 
     public HandleRecordsPanel(){
         // 第一个主内容布局
         //布局控件初始化
-        //this.setSize(890,540);
-        setLayout(new FlowLayout());
-        titlePanel = new JPanel();
-        buttonPanel = new JPanel();
+        setLayout(new BorderLayout(10,10));
         //对应panel处理
         buildTitlePanel();
         buildTablePanel();
         buildOperationPanel();
+        buildCenterPanel();
         buildButtonPanel();
-
         tableModel = (DefaultTableModel) table.getModel();
-        //加入主panel 布局
-        this.add(titlePanel);
-        this.add(tablePanel);
-        this.add(operationPanel);
-        this.add(buttonPanel);
+        this.add(titlePanel,BorderLayout.NORTH);
+        this.add(centerPanel,BorderLayout.CENTER);
+        this.add(buttonPanel,BorderLayout.SOUTH);
+    }
+    private void buildCenterPanel(){
+        centerPanel = new JPanel();
+        centerPanel.setLayout(new BorderLayout(10,10));
+        centerPanel.add(tablePanel,BorderLayout.CENTER);
+        centerPanel.add(operationPanel,BorderLayout.SOUTH);
     }
 
     //标题panel设置
     private void buildTitlePanel(){
         //titlePanel 初始化
-        titlePanel.setLayout(new BorderLayout(10,10));
+        titlePanel = new JPanel();
         titlePanel.setPreferredSize(new Dimension(500, 80));
         titlePanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 0, 0));
 
@@ -87,7 +86,7 @@ public class HandleRecordsPanel extends JPanel{
     //操作框panel设置
     private void buildOperationPanel(){
         operationPanel =  new JPanel();
-        setLayout(new FlowLayout());
+        operationPanel.setLayout(new FlowLayout());
         operationLabel[0] = new JLabel("学号:");
         operationLabel[1] = new JLabel("姓名:");
         operationLabel[2] = new JLabel("性别:");
@@ -111,6 +110,7 @@ public class HandleRecordsPanel extends JPanel{
 
     //按钮panel设置
     private void buildButtonPanel(){
+        buttonPanel = new JPanel();
         buttonPanel.setPreferredSize(new Dimension(600, 140));
         sureButton = new JButton("确认");
         delButton = new JButton("修改");
@@ -132,8 +132,9 @@ public class HandleRecordsPanel extends JPanel{
         public void actionPerformed(ActionEvent e) {
             //数据校验
             try{
-                if(operationTextField[0].getText().length()>15){
-                    //TODO:正则匹配 拿到书再做
+                String regex = "\\d{7,15}";
+                if(!operationTextField[0].getText().matches(regex)){
+                    JOptionPane.showMessageDialog(null,"学号格式不合法","",2);
                     return;
                 }else if(operationTextField[1].getText().length()>10 || operationTextField[1].getText().length()<2){
                     JOptionPane.showMessageDialog(null,"名字长度不合法","",2);
